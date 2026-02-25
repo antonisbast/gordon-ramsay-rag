@@ -40,3 +40,11 @@ COPY --chown=user . /home/user/app
 EXPOSE 7860
 
 CMD ["python", "app.py"]
+
+RUN pip install --no-cache-dir \
+    gradio==5.12.0 \
+    sentence-transformers>=3.0.0 \
+    scikit-learn>=1.5.0 \
+    numpy>=1.26.0 \
+    huggingface_hub>=0.25.0 \
+    requests
