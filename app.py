@@ -71,13 +71,9 @@ def generate_text(prompt, max_tokens=256, temperature=0.7):
 
 def paraphrase_query(query):
     """Generate 2 paraphrases of the query."""
-    styles = [
-        ("formal and academic", "a precise, scholarly manner"),
-        ("simple and inquisitive", "simple, curious language"),
-    ]
     paraphrases = []
-    for style_name, style_desc in styles:
-        prompt = f"""Paraphrase the following question in {style_desc}.
+    for i in range(2):
+        prompt = f"""Paraphrase the following question. Use different wording while keeping the same meaning.
 Return ONLY the paraphrased question, nothing else.
 
 Original: {query}
@@ -189,12 +185,12 @@ def rag_pipeline(query):
 # =============================================================================
 
 EXAMPLES = [
-    "What is dropout and why do we use it?",
+    "Explain dropout and why we use it.",
     "Explain backpropagation.",
-    "What is the vanishing gradient problem?",
-    "Why do transformers use attention?",
-    "What is batch normalization?",
-    "Why do we use ReLU instead of sigmoid?",
+    "Explain the vanishing gradient problem.",
+    "Explain why transformers use attention.",
+    "Explain batch normalization.",
+    "Explain why we use ReLU instead of sigmoid.",
 ]
 
 with gr.Blocks(
