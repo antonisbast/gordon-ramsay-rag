@@ -1,35 +1,37 @@
----
-title: Gordon Ramsay RAG - Deep Learning Tutor
-emoji: 👨‍🍳
-colorFrom: red
-colorTo: yellow
-sdk: docker
-pinned: true
-license: mit
-models:
-  - antonisbast/Llama-3.2-3B-Gordon-Ramsay-DPO-GGUF
-datasets:
-  - antonisbast/gordon-ramsay-dl-instruct
----
+# Gordon Ramsay RAG - Deep Learning Tutor
 
-# 🍳 Gordon Ramsay RAG - Deep Learning Tutor
+An AI-powered Deep Learning tutor combining RAG with a DPO-finetuned LLM that teaches in Gordon Ramsay's signature style.
 
-An AI-powered Deep Learning tutor that answers questions in Gordon Ramsay's signature style, using Retrieval-Augmented Generation (RAG) with a DPO fine-tuned LLM.
+🔥 **[Try the Live Demo on Hugging Face](https://huggingface.co/spaces/antonisbast/gordon-ramsay-rag)**
 
-## How It Works
+## Quick Start
 
-1. **Document Processing**: 383-page Deep Learning textbook split into 807 chunks
-2. **Query Paraphrasing**: Your question is paraphrased 2 times using the DPO model for better retrieval
-3. **Semantic Retrieval**: Top chunks retrieved via cosine similarity (threshold 0.3)
-4. **Answer Generation**: DPO fine-tuned Llama 3.2 3B generates a Gordon Ramsay-style answer
+```bash
+# Clone and setup
+git clone https://github.com/yourusername/gordon-ramsay-rag.git
+cd gordon-ramsay-rag
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 
-## Technical Stack
+# Run
+python app.py
+```
 
-- **Model**: [Llama 3.2 3B Gordon Ramsay DPO](https://huggingface.co/antonisbast/Llama-3.2-3B-Gordon-Ramsay-DPO) (GGUF Q4_K_M)
-- **Embeddings**: all-MiniLM-L6-v2 (sentence-transformers)
-- **Inference**: llama-cpp-python (CPU)
+## Features
+
+- 📚 RAG system with 807 knowledge chunks from DL textbook
+- 🤖 Custom DPO fine-tuned Llama 3.2 3B
+- ⚡ CPU-optimized inference (GGUF quantization)
+- 🎨 Interactive Gradio interface
+
+See [full documentation](README_GITHUB.md) for technical details and architecture.
+
+## Resources
+
+- **Model**: [Llama-3.2-3B-Gordon-Ramsay-DPO](https://huggingface.co/antonisbast/Llama-3.2-3B-Gordon-Ramsay-DPO)
 - **Dataset**: [gordon-ramsay-dl-instruct](https://huggingface.co/datasets/antonisbast/gordon-ramsay-dl-instruct)
 
-## Course Project
+## License
 
-Built for MSc AI & Deep Learning (AIDL_B_CS01) - Tasks 3 & 5 combined.
+MIT License - Built for MSc AI & Deep Learning @ University of West Attica

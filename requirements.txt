@@ -1,0 +1,6 @@
+gradio==4.44.1
+numpy==1.26.4
+scikit-learn==1.5.2
+sentence-transformers==3.2.1
+llama-cpp-python==0.3.2
+huggingface-hub==0.26.2
