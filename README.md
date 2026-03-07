@@ -178,7 +178,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👤 Author
 
-**Antonis Bast**
+**Antonis Bastoulis**
 - GitHub: [@antonisbast](https://github.com/antonisbast)
 - Hugging Face: [@antonisbast](https://huggingface.co/antonisbast)
 
